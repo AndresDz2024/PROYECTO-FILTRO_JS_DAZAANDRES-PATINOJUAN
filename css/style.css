@@ -39,7 +39,7 @@ body{
 }
 .botones{
     position: absolute;
-    top: 50vi;
+    top: 40vi;
     left: 82vi;
 }
 
@@ -51,4 +51,45 @@ button{
 
 button:hover{
     background-color: #3b3e62;
+}
+
+.caracC{
+    position: absolute;
+    width: 40vi;
+    display: grid;
+    top: 10vi;
+    left: 30vi;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 6vi;
+    text-align: center;
+    font-size: 1.2vi;
+}
+.EngineI{
+    margin-bottom: 1vi;
+    border-bottom: 0.2vi solid #fff;
+    width: 12vi;
+}
+.caracD{
+    position: absolute;
+    top: 25vi;
+    left: 60vi;
+    width: 15vi;
+    overflow-y: auto;
+    height: 15vi;
+}
+.caracD1{
+    font-size: 1vi;
+    width: 20vi;
+    display: grid;
+    grid-auto-rows: 3vi;
+    grid-template-columns: 1fr 1fr;
+}
+
+.imagen1{
+    position: absolute;
+    left: 40vi;
+    top: 25vi;
+    border-radius: 0.5vi;
+    width: 18vi;
+    height: 10vi;
 }
