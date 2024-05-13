@@ -13,10 +13,12 @@
 
 body{
     margin: 0;
+    padding-left: 1vi;
     padding-top: 2vi;
     background: linear-gradient(#14162C, #191b3fdf);
     width: 100vh;
     height: 100vh;
+    overflow-y: hidden;
 }
 
 .NameR{
@@ -72,7 +74,7 @@ button:hover{
 .caracD{
     position: absolute;
     top: 25vi;
-    left: 60vi;
+    left: 62vi;
     width: 15vi;
     overflow-y: auto;
     height: 15vi;
@@ -85,11 +87,76 @@ button:hover{
     grid-template-columns: 1fr 1fr;
 }
 
-.imagen1{
+.caracL2{
     position: absolute;
+    top: 25vi;
+    left: 23vi;
+    width: 15vi;
+    overflow-y: auto;
+    height: 15vi;
+}
+.InformationR{
+    margin-bottom: 1vi;
+    border-bottom: 0.2vi solid #fff;
+    width: 12vi;
+}
+.caracL2-{
+    font-size: 1vi;
+    width: 20vi;
+    display: grid;
+    grid-auto-rows: 4vi;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5vi;
+}
+
+
+.caracI{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     left: 40vi;
     top: 25vi;
     border-radius: 0.5vi;
-    width: 18vi;
-    height: 10vi;
+    grid-gap: 1vi;
+    height: 16vi;
+    width: 20vi;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.imagen1 {
+    border-radius: 2vi;
+    width: 20vi; 
+    height: 15vi;
+}
+  
+.caracL{
+    display: grid;
+    position: absolute;
+    width: 20vi;
+    font-size: 0.8vi;
+    height: 20vi;
+    grid-template-columns: 3vi 1fr;
+    grid-gap: 1vi;
+    overflow-y: auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+.iconos{
+    position: absolute;
+    top: 45vi;
+    left: 28vi;
+    height: 12vi;
+    width: 45vi;
+    background-color: #14162C;
 }
