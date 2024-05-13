@@ -19,6 +19,7 @@ body{
     width: 100vh;
     height: 100vh;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .NameR{
@@ -31,7 +32,7 @@ body{
 }
 .caracR{
     top: 5vi;
-    left: 80vi;
+    left: 83vi;
     position: absolute;
     font-size: 1vi;
     width: 20vi;
@@ -46,25 +47,31 @@ body{
 }
 
 button{
+    font-size: 1vi;
     padding: 1vi;
     border: none;
-    background-color: #14162C;
+    background: none;
 }
 
 button:hover{
-    background-color: #3b3e62;
+    background-color: #14162C;
+}
+
+button:focus{
+    background-color: #14162C;
+    border: 0.2vi solid #fff
 }
 
 .caracC{
     position: absolute;
     width: 40vi;
     display: grid;
-    top: 10vi;
+    top: 7vi;
     left: 30vi;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 6vi;
     text-align: center;
-    font-size: 1.2vi;
+    font-size: 1vi;
 }
 .EngineI{
     margin-bottom: 1vi;
@@ -73,11 +80,12 @@ button:hover{
 }
 .caracD{
     position: absolute;
-    top: 25vi;
-    left: 62vi;
+    top: 18vi;
+    left: 64vi;
     width: 15vi;
     overflow-y: auto;
     height: 15vi;
+    font-size: 1vi;
 }
 .caracD1{
     font-size: 1vi;
@@ -88,9 +96,10 @@ button:hover{
 }
 
 .caracL2{
+    font-size: 1vi;
     position: absolute;
-    top: 25vi;
-    left: 23vi;
+    top: 18vi;
+    left: 25vi;
     width: 15vi;
     overflow-y: auto;
     height: 15vi;
@@ -109,13 +118,22 @@ button:hover{
     grid-column-gap: 1.5vi;
 }
 
+.caracL2-d{
+    font-size: 1vi;
+    width: 20vi;
+    display: grid;
+    grid-auto-rows: 4vi;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.5vi;
+}
+
 
 .caracI{
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    left: 40vi;
-    top: 25vi;
+    left: 42vi;
+    top: 18vi;
     border-radius: 0.5vi;
     grid-gap: 1vi;
     height: 16vi;
@@ -133,6 +151,7 @@ button:hover{
 .caracL{
     display: grid;
     position: absolute;
+    top: 5vi;
     width: 20vi;
     font-size: 0.8vi;
     height: 20vi;
@@ -141,16 +160,13 @@ button:hover{
     overflow-y: auto;
 }
 
+.imagenDes{
+    width: 2vi;
+}
+
 a{
     text-decoration: none;
 }
-
-
-
-
-
-
-
 
 .iconos{
     position: absolute;

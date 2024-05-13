@@ -48,13 +48,13 @@ function displayRocket(data) {
     
     <div class="caracC">
       <div class="caracC1">
-        <h2>Atmospheric acceleration:</h2>
+        <h3>Atmospheric <br> acceleration:</h3>
         <div>${calculo.toFixed(2)} %:</div>
         <div>${Intl.NumberFormat('cop').format(valor.first_stage.thrust_sea_level.kN)} kN <br> ${Intl.NumberFormat('cop').format(valor.first_stage.thrust_sea_level.lbf)} lbf</div>
         </div>
 
       <div class="caracC2">
-        <h2>Speed in space</h2>
+        <h3>Speed in space</h3>
         <div>${calculo2.toFixed(2)} %:</div>
         <div>${Intl.NumberFormat('cop').format(valor.first_stage.thrust_vacuum.kN)} kN <br> ${Intl.NumberFormat('cop').format(valor.first_stage.thrust_vacuum.lbf)} lbf</div>
       </div>
@@ -92,61 +92,66 @@ function displayRocket(data) {
     </div>
 
     <div class="caracL2">
-    <div class="InformationR"><h4>Information Rocket</h4></div>
-    <div class="caracL2-">
-      <div>Type:</div>
-      <div>${valor.type}</div>
-      <div>Active:</div>
-      <div>${valor.active}</div>
-      <div>Stages:</div>
-      <div>${valor.stages}</div>
-      <div>Boosters:</div>
-      <div>${valor.boosters}</div>
-      <div>Landing Legs:</div>
-      <div>${valor.landing_legs.number}</div>
-      <div>Leg Material:</div>
-      <div>${valor.landing_legs.material}</div>
-      <div>Payload Weights:</div>
-      <div>${valor.payload_weights.length}</div>
-      <div>Payload Weight 1 ID:</div>
-      <div>${valor.payload_weights[0].id}</div>
-      <div>Payload Weight 1 Name:</div>
-      <div>${valor.payload_weights[0].name}</div>
-      <div>Payload Weight 1 Kg:</div>
-      <div>${valor.payload_weights[0].kg} Kg</div>
-      <div>Payload Weight 1 Lb:</div>
-      <div>${valor.payload_weights[0].lb} Lb</div>
-    </div>
-  </div>
+      <div class="InformationR"><h4>Information Rocket</h4></div>
+      <div class="caracL2-">
+        <div>Type:</div>
+        <div>${valor.type}</div>
+        <div>Active:</div>
+        <div>${valor.active}</div>
+        <div>Stages:</div>
+        <div>${valor.stages}</div>
+        <div>Boosters:</div>
+        <div>${valor.boosters}</div>
+        <div>Landing Legs:</div>
+        <div>${valor.landing_legs.number}</div>
+        <div>Leg Material:</div>
+        <div>${valor.landing_legs.material}</div>
+        <div>Payload Weights:</div>
+        <div>${valor.payload_weights.length}</div
+        <div>Payload Weights Details:</div>
 
+        <div class="caracL2-d">
+          ${valor.payload_weights.map((weight, index) => `
+            <div>Payload Weight ${index + 1} ID:</div>
+            <div>${weight.id}</div>
+            <div>Payload Weight ${index + 1} Name:</div>
+            <div>${weight.name}</div>
+            <div>Payload Weight ${index + 1} Kg:</div>
+            <div>${weight.kg} Kg</div>
+            <div>Payload Weight ${index + 1} Lb:</div>
+            <div>${weight.lb} Lb</div>
+          `).join('')}
+          </div>
+      </div>
+    </div>
 
     <div class="caracL">
-      <img src="../storage/img/mech.svg">
+      <img class="imagenDes" src="../storage/img/mech.svg">
       <div>
         <h2>Description:</h2> 
         <div>${valor.description}</div> 
       </div>
-      <img src="../storage/img/mech.svg">
+      <img class="imagenDes" src="../storage/img/mech.svg">
       <div>
         <h2>Country:</h2> 
         <div>${valor.country}</div> 
       </div>
-      <img src="../storage/img/mech.svg">
+      <img class="imagenDes" src="../storage/img/mech.svg">
       <div>
         <h2>Company:</h2> 
         <div>${valor.company}</div>
       </div>
-      <img src="../storage/img/mech.svg">
+      <img class="imagenDes" src="../storage/img/mech.svg">
       <div>
         <h2>The date of the first flight of the rocket:</h2> 
         <div>${valor.first_flight}</div>
       </div>
-      <img src="../storage/img/mech.svg">
+      <img class="imagenDes" src="../storage/img/mech.svg">
       <div>
         <h2>The estimated cost per rocket launch:</h2> 
         <div>$ ${Intl.NumberFormat('cop').format(valor.cost_per_launch)}</div>
       </div>
-      <img src="../storage/img/mech.svg">
+      <img class="imagenDes" src="../storage/img/mech.svg">
       <div>
         <h2>Read more about the Rocket:</h2> 
         <a target="_blank" href="${valor.wikipedia}">Wikipedia</a>
@@ -156,8 +161,7 @@ function displayRocket(data) {
     if (valor.flickr_images.length > 0) {
       displayImages(valor.flickr_images);
     }
-  }
-
+}
 function cambiarContador(valor) {
   contador = valor;
   fetchRocket(); 
