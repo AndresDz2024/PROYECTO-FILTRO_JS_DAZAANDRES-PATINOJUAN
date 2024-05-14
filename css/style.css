@@ -103,6 +103,7 @@ button:focus{
     width: 15vi;
     overflow-y: auto;
     height: 15vi;
+
 }
 .InformationR{
     margin-bottom: 1vi;
@@ -126,6 +127,41 @@ button:focus{
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 1.5vi;
 }
+
+.caracD{     
+    background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);     
+    background-size: 200% 100%;     
+    background-position: 100% 0;     
+    animation: load 2s infinite;     
+} 
+
+.caracL2{     
+    background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);     
+    background-size: 200% 100%;     
+    background-position: 100% 0;     
+    animation: load 2s infinite;     
+} 
+
+.caracL{     
+    background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);     
+    background-size: 200% 100%;     
+    background-position: 100% 0;     
+    animation: load 2s infinite;     
+}
+
+.caracI{     
+    background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);     
+    background-size: 200% 100%;     
+    background-position: 100% 0;     
+    animation: load 2s infinite;     
+}
+
+@keyframes load{     
+    100%{         
+        background-position: -100% 0;     
+    } 
+}
+
 
 
 .caracI{

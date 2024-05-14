@@ -1,5 +1,15 @@
 let contador = 0;
 
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    const elementos = document.querySelectorAll(".caracD, .caracL2, .NameR, .caracR, .caracC, .caracL, .caracI");
+    elementos.forEach(elemento => {
+      elemento.style.animation = 'none';
+      elemento.style.background = 'none';
+    });
+  }, 100);
+});
+
 function fetchRocket() {
   const url = `https://api.spacexdata.com/v4/Rockets`;
 
