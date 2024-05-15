@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(../storage/fonts/Roboto-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto-Regular";
+    color: #ffff;
+}
+
+*::-webkit-scrollbar {
+    height: 0.8vi;
+    width: 0.8vi;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 0.1vi solid #ffffff; 
+    background-color: #14162C;
+    border-radius: 10px;
+}
+
+.imagenCapsula{
+    position: absolute;
+    top: 2vi;
+    left: 30vi;
+    width: 40vi;
+    border: 0.2vi solid #fff;
+    border-radius: 10vi;
+    background-image: url(../storage/img/fondoC.jpeg);
+    background-size: cover;
+}
+
+body{
+    margin: 0;
+    padding-left: 1vi;
+    padding-top: 2vi;
+    background: linear-gradient(#14162C, #191b3fdf);
+    width: 100vh;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.botones{
+    position: absolute;
+    top: 38.5vi;
+    left: 80vi;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    border: 0.2vi solid #fff;
+    border-radius: 0.5vi;
+    width: 18vi;
+    overflow-x: auto;
+}
+
+button{
+    font-size: 1vi;
+    padding: 1vi;
+    border: none;
+    background: none;
+}
+
+button:hover{
+    background-color: #14162C;
+}
+
+button:focus{
+    background-color: #14162C;
+    border: 0.2vi solid #fff
+}
+  
+.iconos{
+    position: absolute;
+    top: 38vi;
+    left: 28vi;
+    height: 10vi;
+    width: 45vi;
+    background-color: #14162C;
+    border-radius: 1vi;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding-left: 6vi;
+}
+
+.icono{
+    width: 3vi;
+}
+.cajaicono{
+    width: 2vi;
+}
+.capR{
+    top: 5vi;
+    left: 83vi;
+    position: absolute;
+    font-size: 1vi;
+    width: 20vi;
+    display: grid;
+    grid-auto-rows: 3vi;
+    grid-template-columns: 1fr 1fr;
+}
+.capL{
+    display: grid;
+    position: absolute;
+    top: 5vi;
+    width: 20vi;
+    font-size: 0.8vi;
+    height: 20vi;
+    grid-template-columns: 3vi 1fr;
+    grid-gap: 1vi;
+    overflow-y: auto;
+}

@@ -11,6 +11,26 @@
     color: #ffff;
 }
 
+*::-webkit-scrollbar {
+    height: 0.8vi;
+    width: 0.8vi;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-track:hover,
+*::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 0.1vi solid #ffffff; 
+    background-color: #14162C;
+    border-radius: 10px;
+}
+
+
 body{
     margin: 0;
     padding-left: 1vi;
@@ -128,42 +148,6 @@ button:focus{
     grid-column-gap: 1.5vi;
 }
 
-.caracD{     
-    background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);     
-    background-size: 200% 100%;     
-    background-position: 100% 0;     
-    animation: load 2s infinite;     
-} 
-
-.caracL2{     
-    background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);     
-    background-size: 200% 100%;     
-    background-position: 100% 0;     
-    animation: load 2s infinite;     
-} 
-
-.caracL{     
-    background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);     
-    background-size: 200% 100%;     
-    background-position: 100% 0;     
-    animation: load 2s infinite;     
-}
-
-.caracI{     
-    background: linear-gradient(120deg, #ffffff0e 30%, #ffffff23 38%, #f0f0f032 40%, #e5e5e50c 40%);     
-    background-size: 200% 100%;     
-    background-position: 100% 0;     
-    animation: load 2s infinite;     
-}
-
-@keyframes load{     
-    100%{         
-        background-position: -100% 0;     
-    } 
-}
-
-
-
 .caracI{
     position: absolute;
     display: grid;
@@ -206,9 +190,21 @@ a{
 
 .iconos{
     position: absolute;
-    top: 45vi;
+    top: 38vi;
     left: 28vi;
-    height: 12vi;
+    height: 10vi;
     width: 45vi;
     background-color: #14162C;
+    border-radius: 1vi;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding-left: 6vi;
+}
+
+.icono{
+    width: 3vi;
+}
+.cajaicono{
+    width: 2vi;
 }
