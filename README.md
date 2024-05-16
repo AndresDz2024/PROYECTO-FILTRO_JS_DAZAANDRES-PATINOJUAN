@@ -23,7 +23,7 @@ Todos los diseños fueron maquetados con antelación  con la  herramienta figma
 Nuesta pagina esta dirigida principalmente a:
 
 - resolucion 1080px
-- Iphone 14 pro max
+- Iphone 12 pro
 
 ###### HERRAMIENTAS UTLIZADAS
 
