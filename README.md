@@ -16,6 +16,7 @@ Fuimos asignados para hacer un proyecto de nombre EL ELICO´TERO se nos fue enca
 #### DISEÑOS PROPUESTOS
 
 Todos los diseños fueron maquetados con antelación  con la  herramienta figma
+- https://www.figma.com/design/rI418JHn4fmLtnl1n6Rf6C/Untitled?node-id=0%3A1&t=gMYwtZmsQdpq77ez-1
 
 ##### COMPATIBILIDAD
 
