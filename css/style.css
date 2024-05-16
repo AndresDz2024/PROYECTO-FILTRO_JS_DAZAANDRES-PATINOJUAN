@@ -258,7 +258,7 @@ a{
     background-color: #87CEEB;
     border-radius: 5px;
   }
-@media (max-height: 890px    ){
+@media (max-height: 990px){
     body{
         height: 640vi;
         overflow-y: auto;
