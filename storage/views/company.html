@@ -8,15 +8,23 @@
 </head>
 <body>
     <img class="imgspacex" src="../img/Spacex.png" alt="">
-    <div id="capsule"></div>
+    <div id="capsule">
+        <company-info></company-info>
+    </div>
     
     <div class="iconos">
         <a class="cajaicono" href="../../index.html"><img class="icono" src="../img/rocket.svg" alt=""></a>
         <a class="cajaicono" href="./capsules.html"><img class="icono" src="../img/capsule.svg" alt=""></a>
         <a class="cajaicono" href="./history.html"><img class="icono" src="../img/Revista.png" alt=""></a>
-        <a class="cajaicono" href="./company.html"><img class="icono" src="../img/User.png" alt=""></a>
+        <a class="cajaicono" href="./company.html"><img class="icono iconoRo" src="../img/User.png" alt=""></a>
     </div>
 
+    <template id="company-template">
+        <style>
+          @import url("../../css/company.css");
+        </style>
+        <div id="content"></div>
+    </template>
+    <script type="module" src="../../js/modules/company.js"></script>
 </body>
-<script type="module" src="../../js/modules/company.js"></script>
 </html>

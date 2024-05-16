@@ -2,6 +2,9 @@
     font-family: "Roboto-Regular";
     src: url(../storage/fonts/Roboto-Regular.ttf);
 }
+.iconoRo{
+    border-bottom: 0.5vi solid #fff;
+    }
 
 * {
     padding: 0;

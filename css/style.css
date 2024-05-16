@@ -41,6 +41,9 @@ body{
     overflow-y: hidden;
     overflow-x: hidden;
 }
+.iconoRo{
+    border-bottom: 0.5vi solid #fff;
+    }
 
 .NameR{
     position: absolute;
