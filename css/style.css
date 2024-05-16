@@ -36,7 +36,7 @@ body{
     padding-left: 1vi;
     padding-top: 2vi;
     background: linear-gradient(#14162C, #191b3fdf);
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -86,12 +86,12 @@ button:focus{
     position: absolute;
     width: 40vi;
     display: grid;
-    top: 7vi;
-    left: 30vi;
+    top: 5vi;
+    left: 35vi;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 6vi;
     text-align: center;
-    font-size: 1vi;
+    font-size: 0.8vi;
 }
 .EngineI{
     margin-bottom: 1vi;
@@ -130,22 +130,18 @@ button:focus{
     border-bottom: 0.2vi solid #fff;
     width: 12vi;
 }
-.caracL2-{
+.caracL2- {
     font-size: 1vi;
-    width: 20vi;
     display: grid;
-    grid-auto-rows: 4vi;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1.5vi;
+    grid-gap: 2vi;
 }
 
-.caracL2-d{
+.caracL2-d {
     font-size: 1vi;
-    width: 20vi;
     display: grid;
-    grid-auto-rows: 4vi;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1.5vi;
+    grid-gap: 3vi;
 }
 
 .caracI{
@@ -207,4 +203,160 @@ a{
 }
 .cajaicono{
     width: 2vi;
+}
+.progress-bar {
+    padding-top: 2.5vi;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 10vi;
+    height: 10vi;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, #14162C 79%, transparent 80% 100%),
+      conic-gradient(rgb(0, 102, 255) 0%, rgb(166, 198, 228) 0%);
+    transition: background 0.3s ease;
+}
+
+.progress-bar2 {
+    position: relative;
+    justify-content: center;
+    padding-top: 2.5vi;
+    align-items: center;
+    width: 10vi;
+    height: 10vi;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, #14162C 79%, transparent 80% 100%),
+      conic-gradient(rgb(0, 102, 255) 0%, rgb(166, 198, 228) 0%);
+    transition: background 0.3s ease;
+}
+
+.progress-bar::before, .progress-bar2::before {
+    font-size: 0.8vi;
+    color: white;
+    position: absolute;
+}
+
+.caracR {
+    font-family: Arial, sans-serif;
+  }
+  
+  .caracR {
+    font-family: Arial, sans-serif;
+  }
+  
+  .progress-ba {
+    width: 100px; 
+    border-radius: 5px;
+    margin: 5px 0;
+    overflow: hidden; 
+  }
+  
+  .progres {
+    height: 5px;
+    background-color: #87CEEB;
+    border-radius: 5px;
+  }
+@media (max-height: 890px    ){
+    body{
+        height: 640vi;
+        overflow-y: auto;
+    }
+    .caracL{
+        position: absolute;
+        top: 110vi;
+        height: 100vi;
+        font-size: 3vi;
+        width: 100vi;
+        text-align: justify;
+        grid-gap: 5vi;
+    }
+    .imagenDes{
+        width: 5vi;
+    }
+    .NameR{
+        font-size: 15vi;
+        position: absolute;
+        top:14vi;
+        text-align: center;
+        width: 60vi;
+    }
+    .progress-bar{
+       display: none;
+    }
+    .progress-bar2{
+        display: none;
+    }
+    .caracI{
+        left: 5vi;
+        top: 50vi;
+        width: 100vi;
+        height: 50vi;
+
+    }
+    .imagen1{
+        width: 50vi;
+        height: 45vi;
+    }
+    .iconos{
+        position: fixed;
+        top: 190vi;
+        left: 15vi;
+        width: 80vi;
+        height: 20vi;
+        border: 0.5vi solid #3057a0;
+        border-radius: 5vi;
+    }
+    .icono{
+        width: 10vi;
+    }
+    .botones{
+        position: absolute;
+        top: 0vi;
+        left: 40vi;
+    }
+    button{
+        font-size: 6vi;
+    }
+    .caracL2{
+        position: absolute;
+        top: 220vi;
+        left: 10vi;
+        font-size: 5vi;
+        width: 90vi;
+        height: 100vi;
+    }
+    .caracL2-{
+        font-size: 5vi;
+    }
+    .caracL2-d{
+        font-size: 5vi;
+        grid-gap: 20vi;
+
+    }
+    .EngineI{
+        font-size: 5vi;
+        width: 90vi;
+    }
+    .caracD{
+        top: 340vi;
+        left: 10vi;
+        font-size: 5vi;
+        width: 100vi;
+        height: 150vi;
+    }
+    .caracD1{
+        grid-gap: 20vi;
+        font-size: 5vi;
+    }
+    .caracR{
+        position: absolute;
+        top: 500vi;
+        left: 10vi;
+        font-size: 5vi;
+        grid-auto-rows: 15vi;
+        margin-bottom: 20vi;
+        width: 100vi;
+    }
 }

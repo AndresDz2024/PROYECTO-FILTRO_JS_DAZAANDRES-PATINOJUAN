@@ -30,15 +30,14 @@
     border-radius: 10px;
 }
 
-.imagenCapsula{
+.imgspacex{
     position: absolute;
     top: 2vi;
     left: 30vi;
     width: 40vi;
     border: 0.2vi solid #fff;
     border-radius: 10vi;
-    background-image: url(../storage/img/fondoC.jpeg);
-    background-size: cover;
+    background-color: black;
 }
 
 body{
@@ -46,7 +45,7 @@ body{
     padding-left: 1vi;
     padding-top: 2vi;
     background: linear-gradient(#14162C, #191b3fdf);
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -57,7 +56,7 @@ body{
     top: 38.5vi;
     left: 80vi;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     border: 0.2vi solid #fff;
     border-radius: 0.5vi;
     width: 18vi;
@@ -100,24 +99,57 @@ button:focus{
 .cajaicono{
     width: 2vi;
 }
-.capR{
-    top: 5vi;
-    left: 83vi;
+
+.CajaP{
+    top: 11vi;
+    left: 34vi;
+    text-align: center;
     position: absolute;
+    width: 33vi;
     font-size: 1vi;
-    width: 20vi;
-    display: grid;
-    grid-auto-rows: 3vi;
-    grid-template-columns: 1fr 1fr;
-}
-.capL{
-    display: grid;
-    position: absolute;
-    top: 5vi;
-    width: 20vi;
-    font-size: 0.8vi;
-    height: 20vi;
-    grid-template-columns: 3vi 1fr;
-    grid-gap: 1vi;
     overflow-y: auto;
+    height: 25vi;
+    padding-right: 1vi;
+}
+.Title{
+    margin-bottom: 2vi;
+}
+
+a{  
+    color: #c5c2c2;
+    text-decoration: none;
+}
+@media (max-height: 890px    ){
+    .Title{
+        font-size: 3vi;
+        left: 1vi;
+        width: 95vi;
+        
+    }
+    .CajaP{
+        width: 100vi;
+        left: 1vi;
+        height: 600vi;
+        top: 30vi;
+        font-size: 3vi;
+        text-align: justify;
+    }
+    .imgspacex{
+        width: 80vi;
+        left: 13vi;
+        top: 10vi;
+    }
+    .iconos{
+        position: fixed;
+        top: 170vi;
+        left: 15vi;
+        width: 80vi;
+        height: 20vi;
+        border: 0.5vi solid #3057a0;
+        border-radius: 5vi;
+    }
+    .icono{
+        width: 10vi;
+    }
+    
 }

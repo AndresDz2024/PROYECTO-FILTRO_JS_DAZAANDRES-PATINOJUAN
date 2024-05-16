@@ -24,12 +24,32 @@ function displayCapsule(data) {
 
 
   name.innerHTML = `
-    <div class="name"></div>
-    <div class="name">${valor.links.article}</div>
-    
+  <div class="CajaP">
+    <div class="Title">
+      <h1>${valor.title}</h1>
+    </div>
+    <div>
+      <h2>Event Date UTC:</h2> 
+      <div>${new Date(valor.event_date_utc).toLocaleDateString()}</div>
+    </div>
+    <br>
+    <br>
+    <div>
+      <h2>Event Date UNIX:</h2> 
+      <div>${new Date(valor.event_date_unix).toLocaleDateString()}</div>
+    </div>
+    <br>
+    <br>
+    <div>
+      <h2>Details:</h2> 
+      <div>${valor.details}</div>
+    </div>
+    <br>
+    <br>
+    <a target="_blank" href="${valor.links.article}">Leer Más</a>
 
-
-    `;
+  </div>
+`;
 }
 
 fetchCapsules()
@@ -39,7 +59,7 @@ function cambiarContador(valor) {
     fetchCapsules(); 
   }
   
-  document.getElementById('button1').addEventListener('click', function() {
+  document.getElementById('button1').addEventListener('click', function() { 
     cambiarContador(0);
   });
   

@@ -23,44 +23,63 @@ function displayRocket(data) {
   const name = document.getElementById('rocket');
 
   const valor = data[contador];
-  let calculo = ((valor.first_stage.thrust_sea_level.kN)/(valor.first_stage.thrust_sea_level.kN + valor.first_stage.thrust_vacuum.kN)*100);
-  let calculo2 = ((valor.first_stage.thrust_vacuum.kN)/(valor.first_stage.thrust_sea_level.kN + valor.first_stage.thrust_vacuum.kN)*100);
+  let calculo = ((valor.first_stage.thrust_sea_level.kN) / (valor.first_stage.thrust_sea_level.kN + valor.first_stage.thrust_vacuum.kN) * 100).toFixed(2);
+  let calculo2 = ((valor.first_stage.thrust_vacuum.kN) / (valor.first_stage.thrust_sea_level.kN + valor.first_stage.thrust_vacuum.kN) * 100).toFixed(2);
 
   name.innerHTML = `
     <div class="NameR">
-      <p>${valor.name}</p>
+    <p>${valor.name.toUpperCase()}</p>    
     </div>
     <div class="caracR">
-      <div>Rocket Height:</div>
-      <div>${valor.height.feet} F <br> ${valor.height.meters} M</div>
-      <div>Rocket diameter:</div>
-      <div>${valor.diameter.meters} M <br> ${valor.diameter.feet} F</div>
-      <div>Rocket mass:</div>
-      <div>${valor.mass.kg} kg <br> ${valor.mass.lb} lb</div>
-      
-      <div>Second Stage:</div>
-      <div>${valor.second_stage.thrust.kN} kN <br> ${valor.second_stage.thrust.lbf} lbf</div>
-      <div>Payloads Meters:</div>
-      <div>${valor.second_stage.payloads.composite_fairing.height.meters} M <br> ${valor.second_stage.payloads.composite_fairing.height.feet} F<br> </div>
-      <div>Payloads Diameter :</div>
-      <div>${valor.second_stage.payloads.composite_fairing.diameter.feet} F <br> ${valor.second_stage.payloads.composite_fairing.diameter.meters} M<br></div>
-      </div>
-    
-    <div class="caracC">
-      <div class="caracC1">
-        <h3>Atmospheric <br> acceleration:</h3>
-        <div>${calculo.toFixed(2)} %:</div>
-        <div>${Intl.NumberFormat('cop').format(valor.first_stage.thrust_sea_level.kN)} kN <br> ${Intl.NumberFormat('cop').format(valor.first_stage.thrust_sea_level.lbf)} lbf</div>
+      <div>Rocket Height:
+        <div class="progress-ba">
+          <div class="progres" style="width: ${valor.height.feet}%"></div>
         </div>
-
-      <div class="caracC2">
-        <h3>Speed in space</h3>
-        <div>${calculo2.toFixed(2)} %:</div>
+      </div>
+      <div>${valor.height.feet} F <br> ${valor.height.meters} M</div>
+      <div>Rocket Diameter:
+        <div class="progress-ba">
+          <div class="progres" style="width: ${valor.diameter.meters}%"></div>
+        </div>
+      </div>
+      <div>${valor.diameter.meters} M <br> ${valor.diameter.feet} F</div>
+      <div>Rocket Mass:
+        <div class="progress-ba">
+          <div class="progres" style="width: ${valor.mass.kg / 1000}%"></div>
+        </div>
+      </div>
+      <div>${valor.mass.kg} kg <br> ${valor.mass.lb} lb</div>
+      <div>Second Stage:
+        <div class="progress-ba">
+          <div class="progres" style="width: ${valor.second_stage.thrust.kN}%"></div>
+        </div>
+      </div>
+      <div>${valor.second_stage.thrust.kN} kN <br> ${valor.second_stage.thrust.lbf} lbf</div>
+      <div>Payloads Meters:
+        <div class="progress-ba">
+          <div class="progres" style="width: ${valor.second_stage.payloads.composite_fairing.height.meters}%"></div>
+        </div>
+      </div>
+      <div>${valor.second_stage.payloads.composite_fairing.height.meters} M <br> ${valor.second_stage.payloads.composite_fairing.height.feet} F</div>
+      <div>Payloads Diameter:
+        <div class="progress-ba">
+          <div class="progres" style="width: ${valor.second_stage.payloads.composite_fairing.diameter.feet}%"></div>
+        </div>
+      </div>
+      <div>${valor.second_stage.payloads.composite_fairing.diameter.feet} F <br> ${valor.second_stage.payloads.composite_fairing.diameter.meters} M</div>
+    </div>
+    <div class="caracC">
+      <div class="caracC1 progress-bar" data-progress="${calculo}">
+        <h3>Atmospheric <br> acceleration:</h3>
+        <div>${calculo} %</div>
+        <div>${Intl.NumberFormat('cop').format(valor.first_stage.thrust_sea_level.kN)} kN <br> ${Intl.NumberFormat('cop').format(valor.first_stage.thrust_sea_level.lbf)} lbf</div>
+      </div>
+      <div class="caracC2 progress-bar2" data-progress="${calculo2}">
+        <h3>Speed in space:</h3>
+        <div>${calculo2} %</div>
         <div>${Intl.NumberFormat('cop').format(valor.first_stage.thrust_vacuum.kN)} kN <br> ${Intl.NumberFormat('cop').format(valor.first_stage.thrust_vacuum.lbf)} lbf</div>
       </div>
-
     </div>
-    
     <div class="caracD">
       <div class="EngineI"><h4>ENGINE INFORMATION</h4></div>
       <div class="caracD1">
@@ -90,7 +109,6 @@ function displayRocket(data) {
         <div>${valor.engines.thrust_to_weight}</div>
       </div>
     </div>
-
     <div class="caracL2">
       <div class="InformationR"><h4>Information Rocket</h4></div>
       <div class="caracL2-">
@@ -107,9 +125,9 @@ function displayRocket(data) {
         <div>Leg Material:</div>
         <div>${valor.landing_legs.material}</div>
         <div>Payload Weights:</div>
-        <div>${valor.payload_weights.length}</div
+        <div>${valor.payload_weights.length}</div>
         <div>Payload Weights Details:</div>
-
+        <div></div>
         <div class="caracL2-d">
           ${valor.payload_weights.map((weight, index) => `
             <div>Payload Weight ${index + 1} ID:</div>
@@ -121,10 +139,9 @@ function displayRocket(data) {
             <div>Payload Weight ${index + 1} Lb:</div>
             <div>${weight.lb} Lb</div>
           `).join('')}
-          </div>
+        </div>
       </div>
     </div>
-
     <div class="caracL">
       <img class="imagenDes" src="../storage/img/mech.svg">
       <div>
@@ -157,11 +174,16 @@ function displayRocket(data) {
         <a target="_blank" href="${valor.wikipedia}">Wikipedia</a>
       </div>
     </div>
-    `;
-    if (valor.flickr_images.length > 0) {
-      displayImages(valor.flickr_images);
-    }
+  `;
+
+  document.querySelector('.progress-bar').style.background = `radial-gradient(closest-side, #14162C 79%, transparent 80% 100%), conic-gradient(rgb(0, 102, 255) ${calculo}%, rgb(166, 198, 228) 0)`;
+  document.querySelector('.progress-bar2').style.background = `radial-gradient(closest-side, #14162C 79%, transparent 80% 100%), conic-gradient(rgb(0, 102, 255) ${calculo2}%, rgb(166, 198, 228) 0)`;
+
+  if (valor.flickr_images.length > 0) {
+    displayImages(valor.flickr_images);
+  }
 }
+
 function cambiarContador(valor) {
   contador = valor;
   fetchRocket(); 
@@ -190,7 +212,7 @@ function displayImages(images) {
     const imgElement = document.createElement('img');
     imgElement.src = image;
     imgElement.classList.add('imagen1');
-    imgElement.referrerPolicy= 'no-referrer'
+    imgElement.referrerPolicy = 'no-referrer';
     imageContainer.appendChild(imgElement);
   });
 }
