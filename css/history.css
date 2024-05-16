@@ -151,5 +151,14 @@ a{
     .icono{
         width: 10vi;
     }
+    .botones{
+        position: absolute;
+        top: 0vi;
+        left: 33vi;
+        width: 40vi;
+    }
+    button{
+        font-size: 6vi;
+    }
     
 }
